@@ -13,7 +13,7 @@
           </div>
           <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
             <div class="flex flex-shrink-0 items-center">
-              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" />
+              <img class="h-8 w-auto" src="~/assets/images/favicon.png" alt="Your Company" />
             </div>
             <div class="hidden sm:ml-6 sm:block">
               <div class="flex space-x-4">
@@ -35,11 +35,13 @@
   <script setup>
   import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
   import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/vue/24/outline'
+
+  const route = { name: 'index' }
   
   const navigation = [
-    { name: 'Dashboard', href: '#', current: true },
-    { name: 'Team', href: '#', current: false },
-    { name: 'Projects', href: '#', current: false },
-    { name: 'Calendar', href: '#', current: false },
+    { name: 'Home', href: '/', current: route.name == 'index' },
+    { name: 'Education', href: '/education', current: route.name == 'education' },
+    { name: 'Work experience', href: '/work-experience', current: route.name == 'work-experience' },
+    { name: 'My own projects', href: '/projects', current: route.name == 'projects' },
   ]
   </script>
