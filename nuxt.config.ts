@@ -3,6 +3,18 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
-    'nuxt-icon'
-  ]
+    'nuxt-icon',
+    '@nuxtjs/apollo'
+  ],
+  runtimeConfig: {
+    githubToken: process.env.GITHUB_TOKEN
+  },
+  apollo: {
+    clients: {
+      default: {
+        tokenName: 'github-token',
+        httpEndpoint: 'https://api.github.com/graphql'
+      }
+    },
+  },
 })
