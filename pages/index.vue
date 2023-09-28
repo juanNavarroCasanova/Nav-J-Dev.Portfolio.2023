@@ -1,7 +1,8 @@
 <template>
     <section>
-        <h1 class="text-5xl font-bold mt-20">Hi, I am Juan Navarro Casanova</h1>
-        <p class="text-base text-gray-900 p-2 italic">Software Developer</p>
+        <div class="h-[100vh] flex items-center w-[100vw]">
+            <Typewriter class="pb-[40vh]" :data="data"/>
+        </div>
     </section>
     <section class="flex flex-col md:flex-row">
         <div class="md:w-3/4">
@@ -37,4 +38,8 @@
     </section>
 </template>
 <script setup>
+const data = [
+  'Hi, I am Juan Navarro Casanova',
+  'Built with Vue 3, TypeScript, & Tailwind'
+];
 </script>
