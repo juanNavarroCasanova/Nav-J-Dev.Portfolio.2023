@@ -17,7 +17,7 @@
             </div>
             <div class="hidden sm:ml-6 sm:block">
               <!-- Desktop  -->
-              <div class="flex items-center h-full space-x-4">
+              <div class="flex items-center h-full space-x-4 uppercase">
                 <a 
                   v-for="item in navigation"
                   :key="item.name"
@@ -25,7 +25,7 @@
                   :class="[item.current ? 
                   'border-b-4 border-pink-600 text-black text-4xl hover:scale-125' :
                   'text-xl text-black hover:border-b-2 hover:border-black hover:border-b-4',
-                  'text-white px-3 py-2 text-sm font-medium ']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
+                  'px-3 py-2 text-sm font-medium ']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
               </div>
             </div>
           </div>

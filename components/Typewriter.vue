@@ -4,7 +4,7 @@
     </div>
   </template>
   
-  <style>
+  <style scoped>
   .animate-blink {
     animation: blink 0.8s infinite alternate;
   }

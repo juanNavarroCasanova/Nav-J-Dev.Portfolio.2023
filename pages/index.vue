@@ -1,10 +1,10 @@
 <template>
     <section>
-        <div class="h-[100vh] flex items-center w-[100vw]">
-            <Typewriter class="pb-[40vh]" :data="data"/>
+        <div class="flex items-start w-[90vw] lg:max-w-[60vw] pl-0 pt-[20vh]">
+            <Typewriter :data="data"/>
         </div>
     </section>
-    <section class="flex flex-col md:flex-row">
+    <!-- <section class="flex flex-col md:flex-row">
         <div class="md:w-3/4">
             <h2 class="text-5xl font-bold mt-20">My Story</h2>
             <p class="text-lg py-2">
@@ -31,11 +31,11 @@
             </p>
         </div>
         <img src="~/assets/images/laptop.jpg" class="w-1/2 md:max-w-sm py-8 mx-auto">
-    </section>
-    <section>
+    </section> -->
+    <!-- <section>
         <h2 class="text-3xl font-bold mt-8">View more</h2>
         <p class="text-base text-gray-900 p-2 italic">TODO</p>
-    </section>
+    </section> -->
 </template>
 <script setup>
 const data = [
