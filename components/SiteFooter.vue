@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <section class="mx-auto max-w-7xl px-2 sm:px-14 lg:py-6 text-gray-300 flex flex-col">
+    <section class="mx-auto max-w-7xl px-2 mt-[10vh] lg:mt-[0vh] m:px-14 lg:py-6 text-gray-300 flex flex-col">
       <div class="flex flex-row items-end gap-4 mb-4 mt-2">
         <a v-for="link in links" :key="link.name" :href="link.href">
           <Icon :name="link.icon" class="text-pink-600 h-auto w-[3.5rem] sm:w-[5rem]" />
