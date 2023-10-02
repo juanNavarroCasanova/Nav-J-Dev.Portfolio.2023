@@ -58,8 +58,9 @@
   
   const navigation = [
     { name: 'Home', href: '/', current: route.name == 'index' },
-    { name: 'Education', href: '/education', current: route.name == 'education' },
+    { name: 'About me', href: '/about', current: route.name == 'about' },
     { name: 'Work experience', href: '/work-experience', current: route.name == 'work-experience' },
-    { name: 'My own projects', href: '/projects', current: route.name == 'projects' },
+    { name: 'Education', href: '/education', current: route.name == 'education' },
+    { name: 'My own projects', href: '/projects', current: route.name == 'projects' }
   ]
   </script>
