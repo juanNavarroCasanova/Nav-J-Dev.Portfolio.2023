@@ -6,28 +6,28 @@
     </p>
     <div class="mx-auto w-full rounded-2xl pt-4">
         <Disclosure 
-            course="Bachelor of Information Technology"
+            title="Bachelor of Information Technology"
             major="Major in Software Development"
             provider="Southern Cross University"
             location="Gold Coast. Australia"
             date="July 2015 to July 2017"
-            :units="unitsBachelor"
+            :items="unitsBachelor"
         />
     </div>
     <div class="mx-auto w-full rounded-2xl pt-4">
         <Disclosure 
-            course="Diploma of Information Technology"
+            title="Diploma of Information Technology"
             major="Major in Software Development"
             provider="Tafe Queensland"
             location="Gold Coast. Australia"
             date="July 2013 to July 2015"
-            :units="unitsTafe"
+            :items="unitsTafe"
         />
     </div>
     <div class="mx-auto w-full rounded-2xl pt-4">
         <Disclosure 
-            course="Other Courses"
-            :units="otherCourses"
+            title="Other Courses"
+            :items="otherCourses"
         />
     </div>
   </template>
