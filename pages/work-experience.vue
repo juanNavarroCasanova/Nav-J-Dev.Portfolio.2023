@@ -6,100 +6,100 @@
                 company="Ausloans" 
                 role="Software Developer" 
                 location="Gold Coast, QLD. Australia"
-                date="June to March 2014"
+                date="Apr 2022 to Present"
                 :technologies="technologies.Ausloans"
                 :responsabilities="responsabilities.Ausloans"
-                icon="skull"
-                
             />
             <ExperienceDetails 
-                company="Nav-J Development" 
+                company="Navakasa-J Dev" 
                 role="Software Developer" 
                 location="Byron Bay, NSW. Australia"
-                date="June to March 2014"
+                date="November 2021 - Mar 2022"
                 :technologies="technologies.NavaDev"
                 :responsabilities="responsabilities.NavaDev"
-                icon="skull"
             />
             <ExperienceDetails 
                 company="Efficiency Leaders" 
                 role="Software Developer"
                 location="Ballina, NSW. Australia" 
-                date="June to March 2014"
+                date="Nov 2017 - Feb 2019"
                 :technologies="technologies.EfficiencyLeaders"
-                :responsabilities="responsabilities.EfficiencyLeaders"
-                icon="skull"
-                
+                :responsabilities="responsabilities.EfficiencyLeaders" 
             />
             <ExperienceDetails 
                 company="Agtrix" 
                 role="Junior Software Developer"
                 location="Ocean Shores, NSW. Australia"
-                date="June to March 2014"
+                date="Mar 2016 to Feb 2017"
                 :technologies="technologies.Agtrix"
                 :responsabilities="responsabilities.Agtrix"
-                icon="skull"
             />
         </ol>
         <div class="relative lg:w-[55vw] h-10">
-            <BookmarkIcon
-                class="h-auto w-14 -left-[1.7rem] absolute text-pink-600 border rounded-full p-1 border-pink-600 border-2"
+            <AcademicCapIcon
+                class="h-auto w-14 -left-[1.7rem] absolute text-black p-1 "
               />
         </div>
     </div>
   </template>
   <script setup lang="ts">
-  import { BookmarkIcon } from '@heroicons/vue/24/outline';
+  import { AcademicCapIcon } from '@heroicons/vue/24/outline';
 
     const technologies = {
         Ausloans : [
-            'Object oriented program Development',
-            'Programming Mobile Systems',
-            'Data Communications and Networks'
+            'JS frameworks: Vue 2 & 3.',
+            'Vue frameworks: Nuxt 2 & 3.',
+            'CSS frameworks: Tailwind, Vuetify, Vue Material.',
+            'State Management: Vuex, Pinia.',
+            'Others: Jira, Git, Bitbucket, Laravel, Node JS, Hubspot, Google analytics, Smartlook.'
         ],
         NavaDev : [
-            'Object oriented program Development',
-            'Programming Mobile Systems',
-            'Data Communications and Networks',
-            'Web Development I & II'
+            'PHP',
+            'Wordpress',
+            'Html5, CSS'
         ],
         EfficiencyLeaders : [
-            'Object oriented program Development',
-            'Programming Mobile Systems',
-            'Data Communications and Networks'
+            'JS frameworks: Angular 6 & 7.',
+            '.Net Technologies with C#.',
+            'CSS frameworks: Bootstrap.',
+            'Version Control: Git, Bitbucket.',
+            'Others: Typescript, SASS.'
         ],
         Agtrix : [
-            'Object oriented program Development',
-            'Programming Mobile Systems',
-            'Data Communications and Networks',
-            'Web Development I & II',
-            'Computing project I & II'
+            'Xamarin',
+            'C#',
+            'HTML 5, CSS',
+            'Others: Kento UI, Aurelia, Visual studio.',
         ]
     }
 
     const responsabilities = {
         Ausloans : [
-            'Object oriented program Development',
-            'Programming Mobile Systems',
-            'Data Communications and Networks'
+            'Product Owner of the Wallet app.',
+            'Collaborating closely with cross-functional teams, including developers, Graphic designers for Wallet and Consumer Apps.',
+            'Testing and developing new features integrated into Consumer, Zink and Wallet.',
+            'Identifying areas for enhancement and modification within Wallet and leading the development of these modifications.',
+            'In summary, my role involves not only the strategic direction and ownership of the Wallet app but also hands-on involvement in the development and improvement of the Zink and Consumer platforms.'
         ],
         NavaDev : [
-            'Object oriented program Development',
-            'Programming Mobile Systems',
-            'Data Communications and Networks',
-            'Web Development I & II'
+            'Creation of customized apps and sites using Wordpress templates.',
+            'Refactoring and upgrading of modules to improve performance.',
+            'Modify code and customise features - PHP, HTML5, CSS.',
+            'Recommending futures software purchases/upgrades for current applications.'
         ],
         EfficiencyLeaders : [
-            'Object oriented program Development',
-            'Programming Mobile Systems',
-            'Data Communications and Networks'
+            'Adding and testing of features and bug fixes to the Rapid product.',
+            'Analyse bug reports from users and fixing them.',
+            'Modify Controllers and Models when was required with C#.',
+            'Analyse bug reports from users and fixing them.',
+            'Adding and modifying components using typescript and Angular 6/7.'
         ],
         Agtrix : [
-            'Object oriented program Development',
-            'Programming Mobile Systems',
-            'Data Communications and Networks',
-            'Web Development I & II',
-            'Computing project I & II'
+            'Adding new features and improvement of layout of mobile App.',
+            'Testing new changes & updates on Mobile App.',
+            'Xamarin Forms – Cross Platform (Win-IOS- Android).',
+            'Release of Mobile App (Win-Android-IOS).',
+            'Analyse bug reports from users and fixing them.'
         ]
     }
  
