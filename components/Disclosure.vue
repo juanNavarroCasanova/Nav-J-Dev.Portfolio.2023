@@ -7,12 +7,26 @@
             <div class="flex flex-col">
                 <span class="text-lg">{{ title }}</span>
             </div>
-          <ChevronUpIcon
-            :class="open ? 'rotate-180 transform' : ''"
-            class="h-auto w-12 text-pink-600"
-          />
+            <div 
+              class='flex flex-col items-center text-gray-400' 
+              v-if="!open"
+            >
+              <EyeIcon
+                class="h-auto w-7"
+              />
+              <span class="italic">View</span>
+            </div>
+            <div 
+              class='flex flex-col items-center text-pink-600' 
+              v-else
+            >
+              <EyeSlashIcon
+                class="h-auto w-7"
+              />
+              <span class="italic">Hide</span>
+            </div>
         </DisclosureButton>
-        <DisclosurePanel class="flex flex-col px-4 pt-4 pb-2 text-sm text-gray-500" :class="headerContent">
+        <DisclosurePanel class="flex flex-col px-4 pt-4 pb-2 text-sm text-gray-500" :class="contentClass">
             <span class="text-lg lg:text-xl font-bold">{{ major }}</span>
             <span class="text-md lg:text-lg font-bold ">{{ provider }}</span>
             <span class="text-md lg:text-lg font-semibold italic">{{ location }}</span>
@@ -26,7 +40,7 @@
   
   <script setup lang="ts">
     import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
-    import { ChevronUpIcon } from '@heroicons/vue/20/solid'
+    import { EyeIcon, EyeSlashIcon} from '@heroicons/vue/20/solid'
 
     const props = defineProps({
         title: String,
@@ -35,7 +49,7 @@
         location: String,
         date: String,
         headerClass:String,
-        headerContent:String,
+        contentClass:String,
         items: Array<String>
     });
 

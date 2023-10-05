@@ -1,7 +1,7 @@
 <template>
     <h1 class="text-3xl font-bold mt-4 mb-8">Work Experience</h1>
-    <div class="mx-auto w-full pt-4 pl-4">
-        <ol class="relative border-l-2 border-black">
+    <div class="mx-auto pt-4 pl-4">
+        <ol class="relative border-l-2 border-solid border-pink-600 lg:w-[55vw]">
             <ExperienceDetails 
                 company="Ausloans" 
                 role="Software Developer" 
@@ -41,9 +41,15 @@
                 icon="skull"
             />
         </ol>
+        <div class="relative lg:w-[55vw] h-10">
+            <BookmarkIcon
+                class="h-auto w-14 -left-[1.7rem] absolute text-pink-600 border rounded-full p-1 border-pink-600 border-2"
+              />
+        </div>
     </div>
   </template>
   <script setup lang="ts">
+  import { BookmarkIcon } from '@heroicons/vue/24/outline';
 
     const technologies = {
         Ausloans : [
