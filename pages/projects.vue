@@ -1,6 +1,6 @@
 <template>
     <h1 class="text-3xl font-bold my-8">Projects</h1>
-    <p class="text-lg mb-8 font-semibold italic">Here are some of my projects on GitHub.</p>
+    <p v-if="data" class="text-lg mb-8 font-semibold italic">Here are some of my projects on GitHub.</p>
     <section class="grid lg:grid-cols-2 gap-10">
       <div v-for="project in data?.viewer.repositories.nodes" :key="project.id"
         class="p-8 border-4 my-4 rounded-lg hover:bg-gray-50 border-gray-300">
@@ -15,10 +15,39 @@
             project.watchers.totalCount }}
         </div>
       </div>
+      <div v-for="project in upcomingProjects"
+        class="p-8 border-4 my-4 rounded-lg hover:bg-gray-50 border-gray-300">
+          <h2 class="text-2xl text-black font-semibold mb-2 hover:text-3xl">{{ project.name }}</h2>
+        <p>{{ project.description }}</p>
+        <div class="mt-4">
+          <h2 class="text-xl text-pink-600 font-semibold">In progress...</h2>
+        </div>
+      </div>
+      <div v-if="!data" 
+        class="flex w-full justify-center"
+        @click="loadProjects()"
+      >
+       <span class="text-pink-600 font-semibold flex flex-col p-2 border-2 w-25 text-center rounded-lg border-pink-600">View All</span>
+      </div>
     </section>
 </template>
 
 <script setup>
+
+const upcomingProjects = [
+      {
+        name: "Dashy",
+        description: "Dashboard created with Laravel 6, Vue 2 and Vuex."
+      },
+      {
+        name: "Rushter",
+        description: "Application for the quick creation of a roster, using Vue 3, Pinia and Node JS."
+      },
+      {
+        name: "WhatsToday",
+        description: "Application to create daily goals."
+      }
+    ]
 
 const query = gql` 
 {
@@ -52,6 +81,10 @@ try {
   data = result.data;
 } catch (error) {
   console.error("An error occurred:", error);
+}
+
+function loadProjects() {
+  window.location.reload();
 }
 
 </script>
