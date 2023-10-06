@@ -22,10 +22,14 @@
                   v-for="item in navigation"
                   :key="item.name"
                   :href="item.href"
-                  :class="[item.current ? 
-                  'border-b-4 border-pink-600 text-black text-4xl hover:scale-125' :
-                  'text-xl text-black hover:border-b-2 hover:border-black hover:border-b-4',
-                  'px-3 py-2 text-sm font-medium ']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</a>
+                  :class="[route.name === item.href.slice(1) || (route.name === 'index' && item.href === '/') ? 
+                  'border-b-4 border-pink-600 text-black text-2xl hover:scale-110' :
+                  'text-xl text-black hover:border-b-2 hover:border-black hover:border-b-4 hover:scale-110',
+                  'px-3 py-2 font-medium ']" 
+                  :aria-current="route.name === item.href.slice(1) || (route.name === 'index' && item.href === '/') ? 
+                  'page' : undefined">
+                  {{ item.name }}
+                </a>
               </div>
             </div>
           </div>
@@ -40,9 +44,13 @@
             :key="item.name" 
             as="a" 
             :href="item.href" 
-            :class="[item.current ? 'bg-black text-pink-600' : 'text-black',
-            'block rounded-md px-3 py-2 text-base font-medium']" 
-            :aria-current="item.current ? 'page' : undefined">
+            :class="[
+              route.name === item.href.slice(1) || (route.name === 'index' && item.href === '/') 
+              ? 'bg-black text-pink-600' : 'text-black',
+              'block rounded-md px-3 py-2 text-base font-medium']
+            " 
+            :aria-current="route.name === item.href.slice(1) ? 'page' : undefined"
+            >
               {{ item.name }}
           </DisclosureButton>
         </div>
@@ -63,4 +71,12 @@
     { name: 'Education', href: '/education', current: route.name == 'education' },
     { name: 'My own projects', href: '/projects', current: route.name == 'projects' }
   ]
+
+  // Watch for route changes and update the 'current' property
+  watch(() => route.name, (newRouteName) => {
+    navigation.forEach(item => {
+      item.current = item.href.slice(1) === newRouteName
+    });
+  })
+
   </script>
