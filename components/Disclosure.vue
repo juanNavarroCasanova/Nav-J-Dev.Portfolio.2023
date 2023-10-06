@@ -57,7 +57,7 @@
             <span class="text-md lg:text-lg font-bold ">{{ provider }}</span>
             <span class="text-md lg:text-lg font-semibold italic">{{ location }}</span>
             <span class="text-md lg:text-lg italic">{{ date }}</span>
-            <ul class="list-disc lg:text-lg py-2">
+            <ul class="list-disc lg:text-lg py-2 px-4">
                 <li v-for="item in items">{{ item }}</li>
             </ul>
           </DisclosurePanel>
