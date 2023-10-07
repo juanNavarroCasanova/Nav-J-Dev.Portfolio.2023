@@ -7,13 +7,14 @@
             <DisclosureButton class="relative inline-flex items-center justify-center rounded-md focus:ring-inset">
               <span class="absolute -inset-0.5" />
               <span class="sr-only">Open main menu</span>
-              <Bars3Icon v-if="!open" class="block h-14 w-auto text-black" aria-hidden="true" />
-              <XMarkIcon v-else class="block h-14 w-auto text-pink-600 " aria-hidden="true" />
+              <Bars3Icon v-if="!open" class="block h-12 lg:h-14 w-auto text-black" aria-hidden="true" />
+              <XMarkIcon v-else class="block h-12 lg:h-14 w-auto text-pink-600 " aria-hidden="true" />
             </DisclosureButton>
           </div>
           <div class="flex flex-1 items-center justify-end sm:items-stretch sm:justify-between">
-            <div class="flex flex-shrink-0 items-center bg-white rounded-full">
-              <img class="h-14 sm:h-36 w-auto" src="~/assets/images/skull.png" alt="icon" />
+            <div class="flex flex-shrink-0 items-center">
+              <span class="font-sans text-4xl xl:text-5xl font-semibold"> Nav-J Dev</span>
+              <span class="font-sans text-5xl xl:text-7xl font-bold text-pink-600 border-gray-400 rounded-full h-20 w-auto ml-3 pt-3 xl:pt-0">/></span>
             </div>
             <div class="hidden sm:ml-6 sm:block">
               <!-- Desktop  -->
@@ -60,7 +61,7 @@
   
   <script setup>
   import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
-  import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline'
+  import { Bars3Icon, XMarkIcon, CodeBracketIcon} from '@heroicons/vue/24/outline'
 
   const route = useRoute();
   
