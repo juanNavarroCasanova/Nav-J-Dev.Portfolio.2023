@@ -13,7 +13,7 @@
           </div>
           <div class="flex flex-1 items-center justify-end lg:items-stretch lg:justify-between">
             <div class="flex flex-shrink-0 items-center">
-              <span class="font-sans text-3xl sm:text-4xl xl:text-5xl font-semibold"> Nav-J Dev</span>
+              <span class="uppercase text-3xl sm:text-4xl xl:text-5xl font-semibold">N∆∨-J D∑∨</span>
               <span class="font-sans text-5xl xl:text-7xl font-bold text-pink-600 border-gray-400 sm:ml-3 xl:pt-0">/></span>
             </div>
             <div class="hidden lg:block">
