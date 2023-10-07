@@ -1,6 +1,6 @@
 <template>
     <section>
-        <div class="flex items-start w-[90vw] lg:max-w-[60vw] pl-0 pt-[15vh]">
+        <div class="flex items-start max-w-[96vw] xl:max-w-[85vw] pt-[15vh]">
             <Typewriter :data="data"/>
         </div>
     </section>
