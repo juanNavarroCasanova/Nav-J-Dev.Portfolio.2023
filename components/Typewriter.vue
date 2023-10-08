@@ -1,6 +1,6 @@
 <template>
     <div class="text-5xl sm:text-7xl font-semibold relative">
-      <div class="line-text">{{ state.text }} <span class="animate-ping text-pink-600">|</span></div>
+      <div class="line-text text-gray-300">{{ state.text }} <span class="animate-ping text-green-300">●</span></div>
     </div>
   </template>
   

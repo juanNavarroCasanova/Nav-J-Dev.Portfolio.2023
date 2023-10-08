@@ -65,16 +65,16 @@
       </div>
       <div class="flex flex-row items-end gap-4 mb-4 mt-2">
         <a v-for="link in links" :key="link.name" :href="link.href"  @click.prevent="link.name === 'Contact' ? setIsOpen(true) : null">
-          <Icon :name="link.icon" class="text-pink-600 h-auto w-[3.5rem] sm:w-[5rem]"/>
+          <Icon :name="link.icon" class="text-emerald-300 h-auto w-[3.5rem] sm:w-[5rem]"/>
         </a>
         <div class="flex justify-end lg:items-end w-full cursor-pointer" @click="nextSection()">
-          <Icon name="svg-spinners:bouncing-ball" class="text-pink-600 h-auto w-[3.5rem] lg:w-[7rem] -mr-20 lg:mr-0" />
+          <Icon name="svg-spinners:bouncing-ball" class="text-green-300 h-auto w-[3.5rem] lg:w-[7rem] -mr-20 lg:mr-0" />
           <div class="flex space-y-2 rotate-90 lg:rotate-0 -mt-14 lg:mt-0">
             <span 
-              class="absolute flex text-pink-600 items-center rotate-[-90deg] lg:rotate-0 right-[6.5rem] -top-1 lg:-top-14 lg:-right-[0.5rem] justify-center">
+              class="absolute flex text-emerald-300 items-center rotate-[-90deg] lg:rotate-0 right-[6.5rem] -top-1 lg:-top-14 lg:-right-[0.5rem] justify-center">
               <ArrowLongRightIcon class="w-12 h-auto lg:w-20"/>
             </span>
-            <p class="uppercase text-2xl lg:text-5xl text-black font-semibold">{{ nextButtonText }}</p>
+            <p class="uppercase text-2xl lg:text-5xl text-gray-300 font-semibold">{{ nextButtonText }}</p>
           </div>
         </div>
       </div>

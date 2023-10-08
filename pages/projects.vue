@@ -23,13 +23,10 @@
           <h2 class="text-xl text-pink-600 font-semibold">In progress...</h2>
         </div>
       </div>
-      <div v-if="!data" 
-        class="flex w-full justify-center"
-        @click="loadProjects()"
-      >
-       <span class="text-pink-600 font-semibold flex flex-col p-2 border-2 w-25 text-center rounded-lg border-pink-600">View All</span>
-      </div>
     </section>
+    <div v-if="error" class="flex justify-start text-pink-600 text-left font-bold w-full">
+      <p class="py-4 rounded-lg ">Error fetching data from Github... Try later to see all my projects !</p>
+    </div>
 </template>
 
 <script setup>
@@ -74,17 +71,6 @@ const query = gql`
   }
 }
 `
-let data = null;
-
-try {
-  const result = await useAsyncQuery(query);
-  data = result.data;
-} catch (error) {
-  console.error("An error occurred:", error);
-}
-
-function loadProjects() {
-  window.location.reload();
-}
+const { data } = await useAsyncQuery(query)
 
 </script>

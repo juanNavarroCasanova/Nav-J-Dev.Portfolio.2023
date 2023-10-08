@@ -7,9 +7,13 @@ export default defineNuxtConfig({
     '@nuxtjs/apollo'
   ],
   runtimeConfig: {
-    githubToken: process.env.GITHUB_TOKEN
+    githubToken: process.env.GITHUB_TOKEN,
+    githubURL: process.env.GITHUB_API,
   },
   apollo: {
+    authType: "Bearer",
+    authHeader: "Authorization",
+    tokenStorage: "cookie",
     clients: {
       default: {
         tokenName: 'github-token',
