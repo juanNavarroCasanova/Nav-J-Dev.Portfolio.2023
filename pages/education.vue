@@ -1,6 +1,6 @@
 <template>
-    <h1 class="text-3xl font-bold mt-4 mb-8">Welcome to My Education Journey</h1>
-    <p class="text-lg">
+    <h1 class="text-4xl from-emerald-400 to-gray-700 bg-gradient-to-r bg-clip-text py-1 text-transparent font-semibold uppercase mt-4 mb-8">W∈lcθm∉ to My ∈ducat∤θn Jθurn∈y</h1>
+    <p class="text-lg font-semibold text-gray-400">
         Hello there! I'm thrilled to share with you my educational path that has shaped me into the software developer I am today. 
         Education is the foundation upon which I've built my career, and I'm excited to give you a glimpse into my learning journey.
     </p>

@@ -1,7 +1,7 @@
 <template>
-    <section class="">
-        <h1 class="text-3xl font-bold mt-4 mb-8">About me</h1>
-        <p class="text-lg">
+    <section>
+        <h1 class="text-4xl from-emerald-400 to-gray-700 bg-gradient-to-r bg-clip-text py-1 text-transparent font-semibold uppercase mt-4 mb-8">My ∫tθry</h1>
+        <p class="text-lg text-gray-300">
             Hello, I'm Juan Navarro Casanova, a passionate and dedicated software developer born in Spain in 1979.
             My journey into the world of computers began early, 
             but it wasn't until I found myself living in Dublin 13 years ago that I truly immersed myself in the field of software development.<br><br>

@@ -1,7 +1,7 @@
 <template>
-    <h1 class="text-3xl font-bold mt-4 mb-8">Work Experience</h1>
+    <h1 class="text-4xl from-emerald-400 to-gray-700 bg-gradient-to-r bg-clip-text py-1 text-transparent font-semibold uppercase mt-4 mb-8">Wθrk xπr∤∉nc∈</h1>
     <div class="mx-auto pt-4 pl-4">
-        <ol class="relative border-l-2 border-solid border-pink-600 lg:w-[55vw]">
+        <ol class="relative border-l-[3.5px] border-solid border-emerald-400 text-gray-700 lg:w-[55vw]">
             <ExperienceDetails 
                 company="Ausloans" 
                 role="Software Developer" 
@@ -37,7 +37,7 @@
         </ol>
         <div class="relative lg:w-[55vw] h-10">
             <AcademicCapIcon
-                class="h-auto w-14 -left-[1.7rem] absolute text-black p-1 "
+                class="h-auto w-14 -left-[1.7rem] absolute text-emerald-400 p-1 "
               />
         </div>
     </div>

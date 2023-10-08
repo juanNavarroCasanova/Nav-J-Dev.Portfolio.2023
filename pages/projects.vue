@@ -1,30 +1,32 @@
 <template>
-    <h1 class="text-3xl font-bold my-8">Projects</h1>
-    <p v-if="data" class="text-lg mb-8 font-semibold italic">Here are some of my projects on GitHub.</p>
+    <h1 class="text-4xl from-emerald-400 to-gray-700 bg-gradient-to-r bg-clip-text py-1 text-transparent font-semibold uppercase mt-4 mb-8">Prθj∑cts</h1>
+    <p v-if="data" class="text-lg mb-8 font-semibold text-gray-300">Here are some of my projects on GitHub.</p>
     <section class="grid lg:grid-cols-2 gap-10">
       <div v-for="project in data?.viewer.repositories.nodes" :key="project.id"
-        class="p-8 border-4 my-4 rounded-lg hover:bg-gray-50 border-gray-300">
+        class="p-8 border-2 my-4 rounded-lg hover:bg-black hover:bg-opacity-30 border-emerald-400 max-w-[94vw]">
         <a :href="project.url" target="_blank">
-          <h2 class="text-2xl text-black font-semibold mb-2 hover:text-3xl">{{ project.name }}</h2>
+          <h2 class="text-2xl text-gray-300 font-semibold mb-2">{{ project.name }}</h2>
         </a>
-        <p>{{ project.description }}</p>
-        <div class="mt-4">
-          <Icon name="fontisto:star" size="1.1rem" class="text-pink-600" /> Stars: {{ project.stargazers.totalCount }}
-          <Icon name="system-uicons:branch" size="1.1rem" class="text-pink-600" /> Forks: {{ project.forks.totalCount }}
-          <Icon name="system-uicons:eye" size="1.1rem" class="text-pink-600" /> Watchers: {{
-            project.watchers.totalCount }}
+        <p class="text-gray-400">{{ project.description }}</p>
+        <div class="mt-4 flex items-center w-full justify-start space-x-4">
+          <Icon name="fontisto:star" size="1.2rem" class="text-emerald-400"/> 
+            <span class="text-gray-400">{{ project.stargazers.totalCount }}</span>
+          <Icon name="system-uicons:branch" size="1.2rem" class="text-emerald-400 font-bold" />
+            <span class="text-gray-400">Forks: {{ project.forks.totalCount }}</span>
+          <Icon name="system-uicons:eye" size="1.2rem" class="text-emerald-400" /> 
+          <span class="text-gray-400">Watchers: {{project.watchers.totalCount }}</span>
         </div>
       </div>
       <div v-for="project in upcomingProjects"
-        class="p-8 border-4 my-4 rounded-lg hover:bg-gray-50 border-gray-300">
-          <h2 class="text-2xl text-black font-semibold mb-2 hover:text-3xl">{{ project.name }}</h2>
-        <p>{{ project.description }}</p>
+        class="p-8 border-2 my-4 rounded-lg hover:bg-black hover:bg-opacity-30 border-emerald-400 max-w-[94vw]">
+          <h2 class="text-2xl text-gray-300 font-semibold mb-2">{{ project.name }}</h2>
+        <p class="text-gray-400">{{ project.description }}</p>
         <div class="mt-4">
-          <h2 class="text-xl text-pink-600 font-semibold">In progress...</h2>
+          <h2 class="text-xl text-emerald-400 font-semibold">In progress...</h2>
         </div>
       </div>
     </section>
-    <div v-if="error" class="flex justify-start text-pink-600 text-left font-bold w-full">
+    <div v-if="error" class="flex justify-start text-emerald-400 text-left font-bold w-full">
       <p class="py-4 rounded-lg ">Error fetching data from Github... Try later to see all my projects !</p>
     </div>
 </template>

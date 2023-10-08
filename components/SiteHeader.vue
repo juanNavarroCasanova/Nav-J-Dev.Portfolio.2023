@@ -25,8 +25,8 @@
                   :href="item.href"
                   :class="[route.name === item.href.slice(1) || (route.name === 'index' && item.href === '/') ? 
                   'border-b-4 border-emerald-400 from-white to-gray-400 bg-gradient-to-r bg-clip-text text-transparent text-xl hover:scale-110' :
-                  'text-lg text-white hover:border-b-2 from-white to-gray-300 bg-gradient-to-r bg-clip-text text-transparent hover:border-gray-400 hover:border-b-4 hover:scale-110',
-                  'px-3 py-2 font-medium text-white']" 
+                  'text-lg hover:border-b-2 from-white to-gray-300 bg-gradient-to-r bg-clip-text text-transparent hover:border-gray-400 hover:border-b-4 hover:scale-110',
+                  'px-3 py-2 font-medium']" 
                   :aria-current="route.name === item.href.slice(1) || (route.name === 'index' && item.href === '/') ? 
                   'page' : undefined">
                   {{ item.name }}
@@ -67,9 +67,9 @@
   
   const navigation = [
     { name: 'Home', href: '/', current: route.name == 'index' },
-    { name: 'About me', href: '/about', current: route.name == 'about' },
+    { name: 'My story', href: '/about', current: route.name == 'about' },
     { name: 'Work experience', href: '/work-experience', current: route.name == 'work-experience' },
-    { name: 'Education', href: '/education', current: route.name == 'education' },
+    { name: 'Training', href: '/education', current: route.name == 'education' },
     { name: 'My own projects', href: '/projects', current: route.name == 'projects' }
   ]
 

@@ -7,7 +7,7 @@
         >
           <div class="flex space-x-5 items-center">
             <div 
-              class='flex flex-col text-pink-600' 
+              class='flex flex-col text-emerald-500' 
               v-if="!isOpen && title === 'Technologies'"
               >
                 <CommandLineIcon
@@ -15,7 +15,7 @@
                 />
             </div>
             <div 
-              class='flex flex-col text-pink-600' 
+              class='flex flex-col text-emerald-500' 
               v-if="!isOpen && title === 'Duties'"
             >
               <UserCircleIcon
@@ -23,22 +23,22 @@
               />
             </div>
             <div 
-              class='flex flex-col text-pink-600' 
-              v-if="!isOpen && (title?.includes('Technology')) || (title?.includes('Courses'))"
+              class='flex flex-col text-emerald-500' 
+              v-if="!isOpen && (title?.includes('Other') || title?.includes('Diploma') || title?.includes('Bachelor'))"
             >
               <SquaresPlusIcon
-                class="h-auto w-7"
+                class="h-auto w-8 lg:w-10"
               />
             </div>
             <div 
-              class='flex flex-col text-pink-600' 
+              class='flex flex-col text-emerald-500' 
               v-if="isOpen"
             >
               <XMarkIcon
-                class="h-auto w-7"
+                class="h-auto w-8 lg:w-10"
               />
             </div>
-            <span class="text-lg lg:text-2xl font-semibold italic">{{ title }}</span>
+            <span class="text-lg lg:text-2xl font-semibold italic text-gray-200">{{ title }}</span>
           </div>
         </DisclosureButton>
         <transition
@@ -50,7 +50,7 @@
           leave-to-class="transform scale-95 opacity-0"
         >
           <DisclosurePanel 
-            class="flex flex-col pl-10 pb-2 text-sm text-gray-500" 
+            class="flex flex-col pl-10 pb-2 text-sm text-gray-400" 
             :class="contentClass"
           >
             <span class="text-lg lg:text-xl font-bold">{{ major }}</span>
