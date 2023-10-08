@@ -64,7 +64,7 @@
         </div>
       </div>
       <div class="flex items-end justify-between pl-1 mb-4 mt-2">
-        <div class="flex flex-col space-y-2 sm:flex-row sm:space-y-0 sm:space-x-6">
+        <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-6">
           <a v-for="link in links" :key="link.name" :href="link.href"  @click.prevent="link.name === 'Contact' ? setIsOpen(true) : null">
             <div class="text-emerald-100 opacity-90 h-auto w-[3.5rem] sm:w-[5rem]">
               <Icon :name="link.icon" class="text-emerald-300 h-auto w-[3.5rem] sm:w-[5rem]"/>

@@ -69,7 +69,7 @@
     { name: 'Home', href: '/', current: route.name == 'index' },
     { name: 'My story', href: '/about', current: route.name == 'about' },
     { name: 'Work experience', href: '/work-experience', current: route.name == 'work-experience' },
-    { name: 'Training', href: '/education', current: route.name == 'education' },
+    { name: 'Education', href: '/education', current: route.name == 'education' },
     { name: 'My own projects', href: '/projects', current: route.name == 'projects' }
   ]
 
