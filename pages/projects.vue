@@ -73,6 +73,6 @@ const query = gql`
   }
 }
 `
-const { data } = await useAsyncQuery(query)
+const { data, error } = await useAsyncQuery(query)
 
 </script>
