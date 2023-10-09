@@ -6,9 +6,11 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/apollo'
   ],
+  plugins: [
+    { src: '~/plugins/apollo.js', mode: 'client' },
+  ],
   runtimeConfig: {
-    githubToken: process.env.GITHUB_TOKEN,
-    githubURL: process.env.GITHUB_API,
+    githubToken: process.env.GITHUB_TOKEN
   },
   apollo: {
     authType: "Bearer",
