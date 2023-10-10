@@ -7,13 +7,17 @@
         class="p-8 border-2 my-4 rounded-lg hover:bg-black hover:bg-opacity-30 border-emerald-400 max-w-[94vw]"
       >
         <a :href="project.url" target="_blank">
-        <h2 class="text-2xl text-gray-300 font-semibold mb-2">
-          {{ project.name }}
-        </h2>
+          <h2 class="text-2xl text-gray-300 font-semibold mb-2">
+            {{ project.name }}
+          </h2>
         </a>
         <p class="text-gray-400">{{ project.description }}</p>
         <div class="mt-4">
-          <h2 class="text-xl text-emerald-400 font-semibold">In progress...</h2>
+          <a :href="project.url" target="_blank">
+            <h2 class="text-xl text-emerald-400 font-semibold">
+              {{ project.progress }}
+            </h2>
+          </a>
         </div>
       </div>
     </section>
@@ -25,24 +29,29 @@
         {
           name: "Portfolio 2023",
           description: "Portfolio created with Nuxt3, typescript and Tailwind.",
-          url: 'https://github.com/juanNavarroCasanova/Nav-J-Dev.Portfolio.2023'
+          url: 'https://github.com/juanNavarroCasanova/Nav-J-Dev.Portfolio.2023',
+          progress: 'View Repository'
         },
         {
           name: "Portfolio 2022",
           description: "Portfolio created with React, Scss.",
-          url: 'https://github.com/juanNavarroCasanova/Nav-J-Dev.Portfolio.2022'
+          url: 'https://github.com/juanNavarroCasanova/Nav-J-Dev.Portfolio.2022',
+          progress: 'View Repository'
         },
         {
           name: "Dashy",
-          description: "Dashboard created with Laravel 6, Vue 2 and Vuex."
+          description: "Dashboard created with Laravel 6, Vue 2 and Vuex.",
+          progress: 'In progress...'
         },
         {
           name: "Rushter",
-          description: "Application for the quick creation of a roster, using Vue 3, Pinia and Node JS."
+          description: "Application for the quick creation of a roster, using Vue 3, Pinia and Node JS.",
+          progress: 'In progress...'
         },
         {
           name: "WhatsToday",
-          description: "Application to create daily goals."
+          description: "Application to create daily goals.",
+          progress: 'In progress...'
         }
       ]
 
