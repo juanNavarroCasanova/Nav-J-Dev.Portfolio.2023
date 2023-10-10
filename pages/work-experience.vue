@@ -51,7 +51,7 @@
             'Vue frameworks: Nuxt 2 & 3.',
             'CSS frameworks: Tailwind, Vuetify, Vue Material.',
             'State Management: Vuex, Pinia.',
-            'Others: Jira, Git, Bitbucket, Laravel, Node JS, Hubspot, Google analytics, Smartlook.'
+            'Others: Jira, Git, Bitbucket, Laravel, Node JS, Hubspot, Google analytics, REST, Smartlook.'
         ],
         NavaDev : [
             'PHP',
